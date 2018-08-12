@@ -6,9 +6,9 @@ except ImportError:
     pass
 
 from compas_blender.utilities import clear_layer
-from compas_blender.helpers.artists.mixins import VertexArtist
-from compas_blender.helpers.artists.mixins import EdgeArtist
-from compas_blender.helpers.artists.mixins import FaceArtist
+from compas_blender.artists.mixins import VertexArtist
+from compas_blender.artists.mixins import EdgeArtist
+from compas_blender.artists.mixins import PathArtist
 
 
 __author__     = ['Andrew Liew <liew@arch.ethz.ch>']
@@ -17,18 +17,17 @@ __license__    = 'MIT License'
 __email__      = 'liew@arch.ethz.ch'
 
 
-__all__ = ['VolMeshArtist']
+__all__ = ['NetworkArtist']
 
 
-class VolMeshArtist(FaceArtist, EdgeArtist, VertexArtist):
+class NetworkArtist(PathArtist, EdgeArtist, VertexArtist):
     """"""
 
-    def __init__(self, volmesh, layer=0):
-        self.datastructure = volmesh
+    def __init__(self, network, layer=0):
+        self.datastructure = network
         self.layer = layer
         self.defaults = {
             'color.vertex': [1, 0, 0],
-            'color.face': [1, 1, 1],
             'color.edge': [0, 0, 1]}
 
     def redraw(self, timeout=None):
@@ -42,7 +41,6 @@ class VolMeshArtist(FaceArtist, EdgeArtist, VertexArtist):
 
     def clear(self):
         self.clear_vertices()
-        self.clear_faces()
         self.clear_edges()
 
 
@@ -52,4 +50,22 @@ class VolMeshArtist(FaceArtist, EdgeArtist, VertexArtist):
 
 if __name__ == "__main__":
 
-    pass
+    from compas_blender.utilities import get_objects
+
+    from compas_blender.helpers import network_from_bmesh
+
+    network = network_from_bmesh(bmesh=get_objects(layer=0)[0])
+
+    networkartist = NetworkArtist(network=network, layer=1)
+
+    networkartist.clear_layer()
+
+    networkartist.draw_vertices()
+    networkartist.draw_vertexlabels()
+    networkartist.clear_vertices(keys=[4])
+    networkartist.clear_vertexlabels(keys=[6])
+
+    networkartist.draw_edges()
+    networkartist.draw_edgelabels()
+    networkartist.clear_edges(keys=[(0, 4)])
+    networkartist.clear_edgelabels(keys=[(5, 4)])

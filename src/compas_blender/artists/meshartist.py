@@ -6,9 +6,9 @@ except ImportError:
     pass
 
 from compas_blender.utilities import clear_layer
-from compas_blender.helpers.artists.mixins import VertexArtist
-from compas_blender.helpers.artists.mixins import EdgeArtist
-from compas_blender.helpers.artists.mixins import FaceArtist
+from compas_blender.artists.mixins import VertexArtist
+from compas_blender.artists.mixins import EdgeArtist
+from compas_blender.artists.mixins import FaceArtist
 
 
 __author__     = ['Andrew Liew <liew@arch.ethz.ch>']
