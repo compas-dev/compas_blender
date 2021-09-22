@@ -1,5 +1,6 @@
 from typing import Optional
 from typing import Any
+from typing import Union
 
 import bpy
 import compas_blender
@@ -15,13 +16,13 @@ class BoxArtist(BlenderArtist, ShapeArtist):
     ----------
     box : :class:`compas.geometry.Box`
         A COMPAS box.
-    layer : str, optional
-        The layer that should contain the drawing.
+    collection: str or :class:`bpy.types.Collection`
+        The name of the collection the object belongs to.
     """
 
     def __init__(self,
                  box: Box,
-                 collection: Optional[bpy.types.Collection] = None,
+                 collection: Optional[Union[str, bpy.types.Collection]] = None,
                  **kwargs: Any):
         super().__init__(shape=box, collection=collection or box.name, **kwargs)
 
