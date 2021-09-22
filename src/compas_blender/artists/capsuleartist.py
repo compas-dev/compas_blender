@@ -5,39 +5,39 @@ from typing import Union
 import bpy
 
 import compas_blender
-from compas.geometry import Sphere
+from compas.geometry import Capsule
 from compas.artists import ShapeArtist
 from .artist import BlenderArtist
 
 
-class SphereArtist(BlenderArtist, ShapeArtist):
-    """Artist for drawing sphere shapes.
+class CapsuleArtist(BlenderArtist, ShapeArtist):
+    """Artist for drawing capsule shapes.
 
     Parameters
     ----------
-    sphere : :class:`compas.geometry.Sphere`
-        A COMPAS sphere.
+    capsule : :class:`compas.geometry.Capsule`
+        A COMPAS capsule.
     collection: str or :class:`bpy.types.Collection`
         The name of the collection the object belongs to.
     """
 
     def __init__(self,
-                 sphere: Sphere,
+                 capsule: Capsule,
                  collection: Optional[Union[str, bpy.types.Collection]] = None,
                  **kwargs: Any):
-        super().__init__(shape=sphere, collection=collection or sphere.name, **kwargs)
+        super().__init__(shape=capsule, collection=collection or capsule.name, **kwargs)
 
     def draw(self, u=None, v=None):
-        """Draw the sphere associated with the artist.
+        """Draw the capsule associated with the artist.
 
         Parameters
         ----------
         u : int, optional
             Number of faces in the "u" direction.
-            Default is ``~SphereArtist.u``.
+            Default is ``~CapsuleArtist.u``.
         v : int, optional
             Number of faces in the "v" direction.
-            Default is ``~SphereArtist.v``.
+            Default is ``~CapsuleArtist.v``.
 
         Returns
         -------
