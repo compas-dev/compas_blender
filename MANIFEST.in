@@ -1,0 +1,10 @@
+include LICENSE README.md CHANGELOG.md AUTHORS.md CONTRIBUTING.md TODO.md
+include mkdocs.yml tasks.py
+graft src
+graft tests
+graft docs
+graft scripts
+graft provenance
+graft archive
+global-exclude *.py[cod] .DS_Store
+prune **/__pycache__

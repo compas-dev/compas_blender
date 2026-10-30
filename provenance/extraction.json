@@ -1,0 +1,159 @@
+{
+  "upstream": "https://github.com/compas-dev/compas.git",
+  "source_commit": "6fb509e1f1a831b9f0832aa3d67309b39cdefc62",
+  "removal_commit": "7e009ac0dd6b48a120041864308e10b499779ae3",
+  "source_path": "src/compas_blender",
+  "extracted_commit": "d750e37d7856c5e492e82f3343f0715e37bae755",
+  "extracted_tag": "compas-extraction",
+  "method": "git-filter-repo 2.47.0; package source, LICENSE, and host-specific documentation only; ancestors of source_commit",
+  "files": {
+    "src/compas_blender/__init__.py": {
+      "mode": "100644",
+      "blob": "45d447fd6702ddf17374d499d3543ad1e7cb09d3"
+    },
+    "src/compas_blender/collections.py": {
+      "mode": "100644",
+      "blob": "98a590917e4f1dc80440286c3dccb66fbbc0d4e2"
+    },
+    "src/compas_blender/conversions/__init__.py": {
+      "mode": "100644",
+      "blob": "768d0aa750e0ced1777c1fdd302e5a35ac70eeb0"
+    },
+    "src/compas_blender/conversions/breps.py": {
+      "mode": "100644",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    "src/compas_blender/conversions/colors.py": {
+      "mode": "100644",
+      "blob": "3d679c4a220949713316e644fd0822c11e5a1935"
+    },
+    "src/compas_blender/conversions/curves.py": {
+      "mode": "100644",
+      "blob": "9d850feb0364662d5e947b3db47cdcf2b3824b7c"
+    },
+    "src/compas_blender/conversions/geometry.py": {
+      "mode": "100644",
+      "blob": "430e8af98980d60e97943fce529d2337b2103f6a"
+    },
+    "src/compas_blender/conversions/meshes.py": {
+      "mode": "100644",
+      "blob": "e81800e717bce5b9828dc17f3bbe14e4da1df4f2"
+    },
+    "src/compas_blender/conversions/surfaces.py": {
+      "mode": "100644",
+      "blob": "53343e5c79659724f9f2279966e74936f7cedb4d"
+    },
+    "src/compas_blender/conversions/transformations.py": {
+      "mode": "100644",
+      "blob": "202420808472b45ef484f018fa8e6757de206e42"
+    },
+    "src/compas_blender/data.py": {
+      "mode": "100644",
+      "blob": "628b3487c29aa0e1001bad20602bc6fbc8c6b56f"
+    },
+    "src/compas_blender/drawing.py": {
+      "mode": "100644",
+      "blob": "080ec9ebd076dbf204a1f5bf90b61bc2833e6e7a"
+    },
+    "src/compas_blender/geometry/__init__.py": {
+      "mode": "100644",
+      "blob": "1d8eba5d0d01dafcd7030fc2c77024ebb392452e"
+    },
+    "src/compas_blender/geometry/booleans.py": {
+      "mode": "100644",
+      "blob": "76d80b94603e1115b86e7ca0837512faa7b59da2"
+    },
+    "src/compas_blender/install.py": {
+      "mode": "100644",
+      "blob": "929c41fb12751e761f7a829a29cae8bca4209759"
+    },
+    "src/compas_blender/objects.py": {
+      "mode": "100644",
+      "blob": "0233f7b71293e1ebe13ad9731aa1af03a1243555"
+    },
+    "src/compas_blender/print_python_path.py": {
+      "mode": "100644",
+      "blob": "eee9622e009343b59442c203a6ea3f9ca18baf62"
+    },
+    "src/compas_blender/scene/__init__.py": {
+      "mode": "100644",
+      "blob": "b9a9a578d6a650beb78bba9556f4246a11218e58"
+    },
+    "src/compas_blender/scene/boxobject.py": {
+      "mode": "100644",
+      "blob": "7da0b47379f093d377d06ab62e8731219353d190"
+    },
+    "src/compas_blender/scene/circleobject.py": {
+      "mode": "100644",
+      "blob": "f45b9251f6142e01fe04940db77e8b21928f8ea1"
+    },
+    "src/compas_blender/scene/curveobject.py": {
+      "mode": "100644",
+      "blob": "96e7617db0aec70b848774d3cdf8262c6fba5bf5"
+    },
+    "src/compas_blender/scene/frameobject.py": {
+      "mode": "100644",
+      "blob": "9581af0fe9dd2d015537998f69e3334fbda8db63"
+    },
+    "src/compas_blender/scene/graphobject.py": {
+      "mode": "100644",
+      "blob": "551c33e0041f8e60ada084f290d01adce4eedc3a"
+    },
+    "src/compas_blender/scene/lineobject.py": {
+      "mode": "100644",
+      "blob": "b49d29996cfc7d1c12d4fa260d9c8823173c66c6"
+    },
+    "src/compas_blender/scene/meshobject.py": {
+      "mode": "100644",
+      "blob": "315201ac2a081127d11d5f9853253f44843cb879"
+    },
+    "src/compas_blender/scene/planeobject.py": {
+      "mode": "100644",
+      "blob": "53a4eb954ddb3696470cd00eb1cac71fbbd16314"
+    },
+    "src/compas_blender/scene/pointcloudobject.py": {
+      "mode": "100644",
+      "blob": "4ffa7eebd14a4c1f06f31d66c1aee13097ca0c6b"
+    },
+    "src/compas_blender/scene/pointobject.py": {
+      "mode": "100644",
+      "blob": "1eee9eb6a8970805e07e0330af282c967dfbf15d"
+    },
+    "src/compas_blender/scene/polygonobject.py": {
+      "mode": "100644",
+      "blob": "7f9c694e88d93207c241f34542f3eaf176fabe67"
+    },
+    "src/compas_blender/scene/polyhedronobject.py": {
+      "mode": "100644",
+      "blob": "60e77304a9257a0f0b7f470b1cbe9bf6e224736b"
+    },
+    "src/compas_blender/scene/polylineobject.py": {
+      "mode": "100644",
+      "blob": "d21ffc919d990f780d0494d9d26d86c9d9180595"
+    },
+    "src/compas_blender/scene/sceneobject.py": {
+      "mode": "100644",
+      "blob": "f5416c1ae718b6271a7c450c1642af118ab51318"
+    },
+    "src/compas_blender/scene/shapeobject.py": {
+      "mode": "100644",
+      "blob": "b12c659f8de2fbcf0a1983a20e6fbb084aa76cb6"
+    },
+    "src/compas_blender/scene/surfaceobject.py": {
+      "mode": "100644",
+      "blob": "8b0ba37103a5b76b9c1c7d1e956befe09a33cda3"
+    },
+    "src/compas_blender/scene/vectorobject.py": {
+      "mode": "100644",
+      "blob": "8d962b67079b5fd6999df70811e0bbbaba6fb640"
+    },
+    "src/compas_blender/scene/volmeshobject.py": {
+      "mode": "100644",
+      "blob": "5b8f4ff4bb7ac53d20ba6fc861f5e7f21bbc5070"
+    },
+    "src/compas_blender/utilities/__init__.py": {
+      "mode": "100644",
+      "blob": "10dd64eb2874e87603387b9f13a8f8670eaef273"
+    }
+  }
+}
